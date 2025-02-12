@@ -1,57 +1,16 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
-    <title>Product example · Bootstrap v5.3</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel de Celulares</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/docs/5.3/assets/css/docs.min.css" rel="stylesheet"> 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Favicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#712cf9">
-
-    <!-- Custom styles for this template -->
-    <link href="/Front-EFI/product.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-            stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" />
-            <path
-                d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-        </symbol>
-        <symbol id="cart" viewBox="0 0 16 16">
-            <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </symbol>
-        <symbol id="chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-        </symbol>
-    </svg>
-    
-    
+
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand d-md-none" href="#">
@@ -60,8 +19,7 @@
                 </svg>
                 Aperture
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-                aria-controls="offcanvas" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
@@ -69,16 +27,18 @@
                     <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav flex-grow-1 justify-content-between">
-                        <li class="nav-item"><a class="nav-link" href="#" aria-label="Aperture">
+                <div class="offcanvas-body d-flex justify-content-center align-items-center">
+                    <!-- Contenedor para los elementos en fila -->
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                        <!-- Icono Aperture -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#" aria-label="Aperture">
                                 <svg class="bi" width="24" height="24" aria-hidden="true">
                                     <use xlink:href="#aperture" />
                                 </svg>
-                            </a></li>
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-                            </form>
+                            </a>
+                        </li>
+                        <!-- Enlace de Inicio -->
                         <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
@@ -86,190 +46,180 @@
                         <li class="nav-item"><a class="nav-link" href="#">Reclamos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
     
-                        <!-- Nuevo icono de casa -->
-                        <li class="nav-item"><a class="nav-link" href="#" aria-label="Home">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house"
-                                viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M8 3.293l6 6V15h-4v-4H6v4H2v-5.707l6-6zm-6.707 7.414L8 2.586l6.707 6.707-.707.707L8 4.293l-5.293 5.293-.707-.707z" />
-                            </svg>
-                            </a>
+                        <!-- Formulario de búsqueda -->
+                        <li class="nav-item mx-3">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                            </form>
                         </li>
     
-                        <!-- Ícono del carrito -->
-                        <li class="nav-item"><a class="nav-link" href="#" aria-label="Cart">
-                                <svg class="bi" width="24" height="24" aria-hidden="true">
-                                    <use xlink:href="#cart" />
-                                </svg>
+                        <!-- Icono de la casa -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#" aria-label="House">
+                                <i class="bi bi-house" style="font-size: 24px; color: white;"></i>
+                            </a>
+                        </li>
+                        <!-- Icono del carrito -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#" aria-label="Cart">
+                                <i class="bi bi-cart" style="font-size: 24px; color: white;"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </nav>
-    
-    
-    <main>
-        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.
-                            </p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    </nav>
+
+    <!-- CARRUSEL CON GIFs -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        
-        
-        <div class="container marketing">
-        
-            <!-- Three columns of text below the carousel -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the
-                        first column.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
-                        column.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="/Front-EFI/img/airpods.mp4" type="video/mp4">
+                        Tu navegador no soporta videos en HTML5.
+                    </video>
+                </div>
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Descubre nuestros productos</h1>
+                        <p>Explora la mejor tecnología en celulares.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#productos">Ver Productos</a></p>
+                    </div>
+                </div>
+            </div>
             
-    
+            <div class="carousel-item active">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="/Front-EFI/img/iphone.mp4" type="video/mp4">
+                        Tu navegador no soporta videos en HTML5.
+                    </video>
+                </div>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Descubre nuestros productos</h1>
+                        <p>Explora la mejor tecnología en celulares.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#productos">Ver Productos</a></p>
+                    </div>
+                </div>
+            </div>
 
-</main>
-    
-    <footer class="container py-5">
-        <div class="row">
-            <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-                    viewBox="0 0 24 24">
-                    <title>Product</title>
-                    <circle cx="12" cy="12" r="10" />
-                    <path
-                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-                </svg>
-                <small class="d-block mb-3 text-body-secondary">&copy; 2017–{{< year>}}</small>
+            <div class="carousel-item active">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="/Front-EFI/img/airpods.mp4" type="video/mp4">
+                        Tu navegador no soporta videos en HTML5.
+                    </video>
+                </div>
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Descubre nuestros productos</h1>
+                        <p>Explora la mejor tecnología en celulares.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#productos">Ver Productos</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-                </ul>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <section class="features-section">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="bi bi-box-seam icon"></i>
+                    <h5>ENVÍOS A TODO EL PAÍS</h5>
+                    <p>Mediante Correo Argentino</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-credit-card icon"></i>
+                    <h5>3 CUOTAS SIN INTERÉS</h5>
+                    <p>Tarjetas de crédito bancarizadas</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-lock icon"></i>
+                    <h5>COMPRA SEGURA</h5>
+                    <p>Tus datos están protegidos</p>
+                </div>
             </div>
         </div>
-    </footer>    
+    </section>
 
-        <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <!-- FOOTER -->
+    <footer class="footer bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <!-- Ubicación -->
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-geo-alt-fill footer-icon"></i>
+                    <p class="footer-text">Av. Principal 123, Ciudad, País</p>
+                </div>
+                <!-- Teléfono -->
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-telephone-fill footer-icon"></i>
+                    <p class="footer-text">+54 9 1234 5678</p>
+                </div>
+                <!-- Correo -->
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-envelope-fill footer-icon"></i>
+                    <p class="footer-text">contacto@mitienda.com</p>
+                </div>
+            </div>
+    
+            <hr class="my-3 border-white">
+    
+            <div class="row">
+                <!-- Venta de celulares -->
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-phone-fill footer-icon"></i>
+                    <p>Venta de celulares</p>
+                </div>
+                <!-- Accesorios -->
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-headphones footer-icon"></i>
+                    <p>Accesorios</p>
+                </div>
+                <!-- Servicio Técnico -->
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-tools footer-icon"></i>
+                    <p>Servicio técnico</p>
+                </div>
+            </div>
+    
+            <hr class="my-3 border-white">
+    
+            <div class="row text-center">
+                <!-- Política de privacidad -->
+                <div class="col-md-6">
+                    <a href="#" class="text-white footer-link">
+                        <i class="bi bi-file-earmark-lock-fill footer-icon"></i> Política de Privacidad
+                    </a>
+                </div>
+                <!-- Derechos de autor -->
+                <div class="col-md-6">
+                    <i class="bi bi-c-circle footer-icon"></i> 2025 Mi Tienda - Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
