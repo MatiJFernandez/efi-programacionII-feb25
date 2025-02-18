@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Asegura que el contenido sea completamente responsive */
+body {
+    background-image: url('/Front-EFI/img/mapa-comtacto.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+/* Hacer que las imágenes sean responsivas */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos personalizados para el contenedor principal */
+.main-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Asegurarse de que las preguntas frecuentes tengan buen espaciado */
+.accordion-button {
+    background-color: #495057;
+    color: white;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #007bff;
+    color: white;
+}
+
+main {
+    min-height: calc(100vh - 80px); /* Ajusta 80px si el footer tiene altura fija */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*PREGUNTAS FRECUENTES*/
+/* Estilo general para escritorio */
+.accordion {
+    max-width: 800px;
+    position: relative;
+    left: 150px; /* Desplaza el acordeón hacia la derecha */
+}
+
+.accordion-container {
+    position: relative; /* Necesario para que el título se posicione correctamente */
+    padding-top: 20px; /* Espacio adicional para el título */
+    text-align: center; /* Centra el título dentro de su contenedor */
+    left: 100px; /* Mueve el contenedor del título hacia la derecha */
+}
+
+.accordion-container h2 {
+    margin: 0; /* Elimina márgenes por defecto */
+    padding-bottom: 15px; /* Espacio entre el título y las preguntas */
+}
+
+.accordion-item {
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que se vea cortado el contenido */
+}
+
+.accordion-button {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    padding: 15px; /* Espaciado interno */
+}
+
+.accordion-body {
+    font-size: 0.95rem; /* Tamaño de letra más compacto */
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Asegúrate de que el contenedor no se expanda más allá de un ancho máximo */
+.main-container {
+    max-width: 1200px; /* Ajusta este valor si es necesario */
+    margin: 0 auto; /* Esto centrará el contenedor */
+}
+
+/* Si usas Bootstrap, también puedes modificar el contenedor directamente */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px; /* Puedes ajustar este valor según el diseño deseado */
+        margin: 0 auto; /* Esto centrará el contenedor */
+    }
+}
+
+
+/* Adaptaciones para pantallas pequeñas */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .accordion-body {
+        font-size: 14px;
+    }
+}
+
+/* Contenedor principal con más espaciado en pantallas más grandes */
+@media (min-width: 992px) {
+    .main-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+

@@ -1,0 +1,167 @@
+.custom-bg {
+  background-color: #121212 !important;
+}
+/* NAV sub menu*/
+/* --- Estilos para submenú en móvil --- */
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #343a40 !important;
+  /* Fondo oscuro */
+  color: white !important;
+  /* Texto blanco */
+}
+
+.dropdown-submenu:hover>.dropdown-item {
+  background-color: #343a40 !important;
+  /* Fondo oscuro */
+  color: white !important;
+}
+
+.dropdown-item:active {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+/* Estilo del offcanvas */
+.offcanvas {
+  background-color: #343a40;
+  color: white;
+}
+
+.offcanvas .nav-link {
+  color: white;
+}
+
+.offcanvas .nav-link:hover {
+  color: #007bff;
+}
+
+/* CARRUSEL */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupará toda la pantalla */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo global para los botones en el carrousel */
+.carousel-item .carousel-caption a.btn {
+  background: linear-gradient(to right, rgba(0, 87, 217, 0.8), rgba(255, 0, 122, 0.8)); /* Degradado con opacidad */
+  color: white; /* Color del texto blanco */
+  text-transform: unset; /* Texto en mayúsculas */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 25px; /* Bordes redondeados */
+  transition: background 0.3s ease, transform 0.3s ease; /* Animación de transición */
+}
+
+/* Estilo cuando el mouse pasa sobre el botón */
+.carousel-item .carousel-caption a.btn:hover {
+  background: linear-gradient(to right, rgba(0, 87, 217, 1), rgba(255, 0, 122, 1)); /* Degradado sin opacidad */
+  transform: scale(1.05); /* Aumento de tamaño al pasar el mouse */
+}
+
+/* Si necesitas otros ajustes visuales para el carrousel o los botones, puedes agregarlos aquí */
+
+/* Posiciona los textos del carrusel al centro */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Sección de características */
+.features-section {
+  background: linear-gradient(to right, #0057d9 , #ff007a);
+  color: white;
+  padding: 40px 0;
+}
+
+.feature-box {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.features-section .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #343a40;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-text, .footer-link {
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ccc;
+}
+
+hr {
+  border-top: 1px solid #555;
+  margin: 1rem 0;
+}
+
+/* Reducir el tamaño de la última columna */
+.row.text-center .col-md-6 {
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+}
+
+/* Asegura que la barra de búsqueda no se haga demasiado pequeña en pantallas medianas */
+@media (max-width: 992px) {
+  .search-bar {
+    flex-grow: 1; /* Permite que crezca dentro del navbar */
+    min-width: 180px; /* Evita que sea demasiado pequeña */
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%; /* Ocupa todo el ancho disponible en móviles */
+  }
+}

@@ -1,0 +1,19 @@
+.card img {
+    height: 200px;  /* Ajusta la altura de todas las imágenes */
+    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+}
+
+button {
+    background: linear-gradient(to right, rgba(0, 87, 217, 0.8), rgba(255, 0, 122, 0.8)); /* Degradado con opacidad */
+    color: white; /* Color del texto blanco */
+    text-transform: unset; /* Texto en mayúsculas */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    transition: background 0.3s ease, transform 0.3s ease; /* Animación de transición */
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}

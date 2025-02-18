@@ -2,57 +2,22 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
-    <title>Accesorios</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel de Celulares</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/docs/5.3/assets/css/docs.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-
-    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#712cf9">
-    <link href="/product.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/Front-EFI/CSS/accesorios.css">
+    <link rel="stylesheet" href="/Front-EFI/CSS/index.css">
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-            stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" />
-            <path
-                d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-        </symbol>
-        <symbol id="cart" viewBox="0 0 16 16">
-            <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </symbol>
-        <symbol id="chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-        </symbol>
-    </svg>
-    
+
     <nav class="navbar navbar-expand-md custom-bg sticky-top border-bottom" data-bs-theme="dark">
         <div class="container">
             <!-- Botón del menú hamburguesa para móviles -->
@@ -61,29 +26,44 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Logo centrado en móviles, alineado a la izquierda en pantallas grandes -->
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="/imagenes/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/Front-EFI/index.html">
+                <img src="/Front-EFI/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
                     class="d-block">
             </a>
 
             <!-- Offcanvas para el menú en móviles -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand d-flex align-items-center" href="/Front-EFI/index.html">
+                        <img src="/Front-EFI/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
+                            class="d-block">
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Buscador dentro del offcanvas (solo en móvil) -->
+                <form class="d-md-none px-3" role="search">
+                    <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                </form>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto d-flex align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Front-EFI/index.html">Inicio</a></li>
 
                         <!-- Dropdown Productos -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="/Front-EFI/productos.html" id="productosDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item" href="celulares.html">Celulares</a>
-                                    <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                                <li><a class="dropdown-item" href="/Front-EFI/accesorios.html">Accesorios</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="dropdown-item dropdown-toggle" href="#" id="celularesDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Celulares
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="celularesDropdown">
                                         <li><a class="dropdown-item" href="apple.html">Apple</a></li>
                                         <li><a class="dropdown-item" href="huawei.html">Huawei</a></li>
                                         <li><a class="dropdown-item" href="motorola.html">Motorola</a></li>
@@ -94,34 +74,38 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-
-                        <!-- Dropdown Soporte -->
+                        <li class="nav-item"><a class="nav-link" href="/Front-EFI/servicios.html">Servicios</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="soporteDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Soporte
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="soporteDropdown">
-                                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
-                                <li><a class="dropdown-item" href="preguntas_frecuentes.html">Preguntas frecuentes</a></li>
+                                <li><a class="dropdown-item" href="/Front-EFI/s-contacto.html">Contacto</a></li>
+                                <li><a class="dropdown-item" href="/Front-EFI/s-preguntasFrec.html">Preguntas
+                                        frecuentes</a></li>
                             </ul>
                         </li>
-
-                        <li class="nav-item"><a class="nav-link" href="reclamos.html">Reclamos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Front-EFI/reclamos.html">Reclamos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Front-EFI/nosotros.html">Nosotros</a></li>
                     </ul>
+                </div>
+                <!-- Iconos dentro del offcanvas (solo en móvil) -->
+                <div class="offcanvas-footer d-md-none d-flex justify-content-center p-3">
+                    <a class="nav-link mx-2" href="#" aria-label="Person">
+                        <i class="bi bi-person" style="font-size: 24px; color: white;"></i>
+                    </a>
+                    <a class="nav-link mx-2" href="#" aria-label="Cart">
+                        <i class="bi bi-cart" style="font-size: 24px; color: white;"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Contenedor derecho con buscador e iconos -->
-            <div class="d-flex align-items-center">
-                <!-- Formulario de búsqueda -->
-                <form class="d-none d-md-flex me-3" role="search">
+            <!-- Contenedor derecho (solo en pantallas grandes) -->
+            <div class="d-none d-md-flex align-items-center">
+                <form class="me-3" role="search">
                     <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
                 </form>
-
-                <!-- Iconos de navegación -->
                 <a class="nav-link mx-2" href="#" aria-label="Person">
                     <i class="bi bi-person" style="font-size: 24px; color: white;"></i>
                 </a>
@@ -132,174 +116,178 @@
         </div>
     </nav>
 
-    <div class="album py-5 bg-dark">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/528267bd-b813-4720-8e84-9d29bd2d4e2c.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+    <main>
+        <div class="album py-5 bg-dark">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/528267bd-b813-4720-8e84-9d29bd2d4e2c.jpeg" alt="iPhone 11"
+                                class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Auricular Marshall Major Iv On-ear</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="/Front-EFI/marshallMajor.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/8685b3b9-97b5-4db3-87c8-519012f11514.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/airpods2.jpeg" alt="iPhone 11"
+                                class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/auris_sony.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/auris_sony.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/auris_jbl.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/auris_jbl.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/reloj2.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/reloj2.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/auriculares2.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/auriculares2.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/airpods.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/airpods.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/fundas.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/fundas.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
-                        <img src="/imagenes/reloj.jpeg" alt="iPhone 11" class="img-fluid">
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">Iphone 11 64 GB</p>
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                                        <a href="iphone_11.html">Ver más</a>
-                                    </button>
+                    <div class="col">
+                        <div class="card shadow-sm h-100 rounded"> <!-- Misma altura para todas las tarjetas -->
+                            <img src="/Front-EFI/img/accesorios/reloj.jpeg" alt="iPhone 11" class="img-fluid">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">Iphone 11 64 GB</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                                            <a href="iphone_11.html">Ver más</a>
+                                        </button>
+                                    </div>
+                                    <a class="nav-link" href="#" aria-label="Cart">
+                                        <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
+                                    </a>
                                 </div>
-                                <a class="nav-link" href="#" aria-label="Cart">
-                                    <i class="bi bi-cart" style="font-size: 24px; color: black;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <footer class="footer custom-bg text-white py-3">
         <div class="container">
@@ -307,22 +295,22 @@
                 <!-- Ubicación -->
                 <div class="col-md-4 text-center">
                     <i class="bi bi-geo-alt-fill footer-icon"></i>
-                    <p class="footer-text">Av. Principal 123, Ciudad, País</p>
+                    <p class="footer-text">Wenceslao Tejerina Nte. 783, X5800 Río Cuarto, Córdoba</p>
                 </div>
                 <!-- Teléfono -->
                 <div class="col-md-4 text-center">
                     <i class="bi bi-telephone-fill footer-icon"></i>
-                    <p class="footer-text">+54 9 1234 5678</p>
+                    <p class="footer-text">0358 464-3036</p>
                 </div>
                 <!-- Correo -->
                 <div class="col-md-4 text-center">
                     <i class="bi bi-envelope-fill footer-icon"></i>
-                    <p class="footer-text">contacto@mitienda.com</p>
+                    <p class="footer-text">mobxtec@gmail.com</p>
                 </div>
             </div>
-    
+
             <hr class="my-3 border-white">
-    
+
             <div class="row">
                 <!-- Venta de celulares -->
                 <div class="col-md-4 text-center">
@@ -340,9 +328,9 @@
                     <p>Servicio técnico</p>
                 </div>
             </div>
-    
+
             <hr class="my-3 border-white">
-    
+
             <div class="row text-center">
                 <!-- Política de privacidad -->
                 <div class="col-md-6">
@@ -352,18 +340,30 @@
                 </div>
                 <!-- Derechos de autor -->
                 <div class="col-md-6">
-                    <i class="bi bi-c-circle footer-icon"></i> 2025 Mi Tienda - Todos los derechos reservados.
+                    <i class="bi bi-c-circle footer-icon"></i> 2025 MOBXTEC - Todos los derechos reservados.
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <!-- Script para manejar el submenú en el offcanvas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll(".dropdown-toggle");
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener("click", function (e) {
+                    var submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains("dropdown-menu")) {
+                        var isVisible = submenu.style.display === "block";
+                        submenu.style.display = isVisible ? "none" : "block";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
