@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="product-modal-wrapper">
+        <div class="product-modal">
+            <!-- Pop up- Button-->
+            <dialog id="MediosEnvio" class="product-modal-container">
+                <form method="dialog">
+                    <section>
+                        <h2>Métodos de envío</h2>
+                        <ul class="product-modal-list">
+                                                
+                            <li class="product-modal-item">
+                                <img src="https://blancohogar.mitiendaonline.com/img/tmp/carrier_mini_33_1.png" alt="">
+                                <p><b>Retiro en sucursal</b></p>
+                            </li>
+                            <li class="product-modal-item">
+                                <img src="https://blancohogar.mitiendaonline.com/img/tmp/carrier_mini_28_1.png" alt="">
+                                <p><b>OCA a domicilio</b>
+                                </p>
+                            </li>
+                            <li class="product-modal-item">
+                                <img src="https://blancohogar.mitiendaonline.com/img/tmp/carrier_mini_28_1.png" alt="">
+                                <p><b>Andreani a domicilio</b>
+                                </p>
+                            </li> 
+                        </ul>
+                    </section>
+                    <menu>
+                        <button id="cerrarEnvios" type="reset">Cerrar</button>
+                    </menu>
+                </form>
+            </dialog>
+        
+            <menu>
+                <button id="abrirEnvios" class="modal-boton-productos"><img src="/img/icons/envio.png" alt="Icono Correo Argentino">Medios de
+                    envío</button>
+            </menu>
+            <!-- FIN Pop up- Button-->
+        </div>
+        <div class="product-modal">
+            <!-- Pop up- Button-->
+            <dialog id="MediosDePago" class="product-modal-container">
+                <form method="dialog">
+                    <section>
+                        <h2>Metodos de pago</h2>
+                        <ul class="product-modal-list">
+                            <li class="product-modal-item">
+                                <img src="/img/icons/Visa.png" alt="">
+                                <img src="/img/icons/Mastercard.png" alt="" id="mastercard">
+                                <p><b>Abona con Tarjeta</b></p>
+                            </li>
+                            <li class="product-modal-item">
+                                <img src="/img/icons/Mercadopago.png" alt="">
+                                <p><b>Abona con Mercadopago</b></p>
+                            </li>
+                                        </ul></section>
+                    <menu>
+                        <button id="cerrarPagos" type="reset">Cerrar</button>
+                    </menu>
+                </form>
+            </dialog>
+        
+            <menu>
+                <button id="abrirPagos" class="modal-boton-productos"><img src="/img/icons/tarjeta.png" alt="Icono Tarjeta de credito">Medios de
+                    pago</button>
+            </menu>
+            <!-- FIN Pop up- Button-->
+        </div>
+        </section>
+</body>
+
+<script>
+    function handleModal(idAbrirModal, idCerrarModal, idModal) {
+        const updateButton = document.getElementById(idAbrirModal);
+    const cancelButton = document.getElementById(idCerrarModal);
+    const MediosEnvio = document.getElementById(idModal);
+    
+    
+    // Update button opens a modal dialog
+    updateButton.addEventListener('click', function() {
+        MediosEnvio.showModal();
+        MediosEnvio.classList.add("abierto")
+    });
+    
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener('click', function() {
+        MediosEnvio.close();
+        MediosEnvio.classList.remove("abierto")
+    });
+    
+    }
+    
+    handleModal('abrirEnvios', 'cerrarEnvios', 'MediosEnvio')
+    handleModal('abrirPagos', 'cerrarPagos', 'MediosDePago')
+    </script>
+</html>
