@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrousel de Celulares</title>
+    <title>Preguntas frecuentes</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -12,11 +12,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!-- Estilos -->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="/CSS/s-preguntasFrec.css">
     <link rel="stylesheet" href="/CSS/index.css">
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-md custom-bg sticky-top border-bottom" data-bs-theme="dark">
         <div class="container">
             <!-- Botón del menú hamburguesa para móviles -->
@@ -24,22 +28,17 @@
                 aria-controls="offcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="/index.html">
-                <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
-                    class="d-block">
+                <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo" class="d-block">
             </a>
-
             <!-- Offcanvas para el menú en móviles -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
                 <div class="offcanvas-header">
                     <a class="navbar-brand d-flex align-items-center" href="/index.html">
-                        <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
-                            class="d-block">
+                        <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo" class="d-block">
                     </a>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <!-- Buscador dentro del offcanvas (solo en móvil) -->
                 <form class="d-md-none px-3" role="search">
@@ -48,11 +47,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto d-flex align-items-center">
                         <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
-
                         <!-- Dropdown Productos -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/productos.html" id="productosDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="/productos.html" id="productosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="productosDropdown">
@@ -72,7 +70,7 @@
                                 </li>
                             </ul>
                         </li>
-
+    
                         <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="soporteDropdown" role="button"
@@ -81,8 +79,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="soporteDropdown">
                                 <li><a class="dropdown-item" href="/s-contacto.html">Contacto</a></li>
-                                <li><a class="dropdown-item" href="/s-preguntasFrec.html">Preguntas
-                                        frecuentes</a></li>
+                                <li><a class="dropdown-item" href="/s-preguntasFrec.html">Preguntas frecuentes</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/reclamos.html">Reclamos</a></li>
@@ -91,39 +88,54 @@
                 </div>
                 <!-- Iconos dentro del offcanvas (solo en móvil) -->
                 <div class="offcanvas-footer d-md-none d-flex justify-content-center p-3">
-                    <a class="nav-link mx-2" href="#" aria-label="Person">
+                    <a class="nav-link mx-2" href="/login.html" aria-label="Person">
                         <i class="bi bi-person" style="font-size: 24px; color: white;"></i>
                     </a>
-                    <a class="nav-link mx-2" href="#" aria-label="Cart">
+                    <a class="nav-link mx-2" href="#" aria-label="Cart" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
                         <i class="bi bi-cart" style="font-size: 24px; color: white;"></i>
                     </a>
+                    <span id="contadorCarritoMobile" style="font-size: 16px; color: white; margin-left: 5px;">0</span>
                 </div>
             </div>
-
+    
             <!-- Contenedor derecho (solo en pantallas grandes) -->
             <div class="d-none d-md-flex align-items-center">
                 <form class="me-3" role="search">
                     <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
                 </form>
-                <a class="nav-link mx-2" href="#" aria-label="Person">
+                <a class="nav-link mx-2" href="/login.html" aria-label="Person">
                     <i class="bi bi-person" style="font-size: 24px; color: white;"></i>
                 </a>
-                <a class="nav-link mx-2" href="#" aria-label="Cart">
+                <a class="nav-link mx-2" href="#" aria-label="Cart" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
                     <i class="bi bi-cart" style="font-size: 24px; color: white;"></i>
                 </a>
+                <span id="contadorCarritoDesktop" style="font-size: 16px; color: white; margin-left: 5px;">0</span>
             </div>
         </div>
     </nav>
 
-    <main class="bg-dark text-white">
+    <!-- Offcanvas Carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 id="carritoOffcanvasLabel">Tu Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="listaCarrito" class="list-group"></ul>
+            <p class="mt-3"><strong>Total:</strong> $<span id="totalCarrito">0.00</span></p>
+            <a href="/login.html"><button class="btn btn-success w-100">Finalizar Compra</button></a>
+        </div>
+    </div>
 
+    <main class="bg-dark text-white">
         <div class="carousel-inner">
-            <div class="carousel-item active"> <!-- Solo este tiene active -->
+            <div class="carousel-item active">
                 <div class="video-container">
-                    <video autoplay loop muted playsinline>
-                        <source src="/img/mapa-contacto.mp4" type="video/mp4">
-                    </video>
-                    <div class="container main-container">
+                    <img src="/img/preguntas-frecuentes.jpeg" alt="Imagen de ubicación" style="width: 100%; height: 100vh; object-fit: cover;">
+                    <!-- Aseguramos que la imagen cubra todo el alto de la pantalla -->
+    
+                    <div class="container main-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 90%; max-width: 800px;">
+                        <!-- Ajustamos el contenedor del formulario para centrarlo -->
                         <div class="accordion" id="faqAccordion">
                             <h1 class="text-center mb-4">Preguntas Frecuentes</h1>
                             <div class="accordion-item">
@@ -141,7 +153,6 @@
                                     </div>
                                 </div>
                             </div>
-            
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -157,7 +168,6 @@
                                     </div>
                                 </div>
                             </div>
-            
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -173,7 +183,6 @@
                                     </div>
                                 </div>
                             </div>
-            
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -189,14 +198,13 @@
                                     </div>
                                 </div>
                             </div>
-            
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </main>
+    
 
 
     <!-- FOOTER -->
@@ -259,6 +267,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="carrito.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

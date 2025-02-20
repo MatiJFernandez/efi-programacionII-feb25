@@ -47,3 +47,31 @@
 .mt-5 {
     margin-top: 3rem;
 }
+
+/*imagen*/
+.main-bg {
+    background: url('/img/nosotros2.png') no-repeat center center fixed; /* Cambia la ruta de la imagen */
+    background-size: cover; /* La imagen cubre todo el espacio */
+    padding: 4rem; /* Espaciado interno */
+    min-height: 80vh; /* Esto asegura que el contenido del main sea lo suficientemente alto como para verse bien */
+    color: white; /* Asegura que el texto sea blanco para mejor visibilidad */
+}
+
+.content-box {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente para hacer que el texto sea legible */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h1, p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra en el texto para mejorar la legibilidad */
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo negro con opacidad */
+    padding: 20px;
+    border-radius: 10px;
+}
+h1, h2, h5, p {
+    color: white;
+}

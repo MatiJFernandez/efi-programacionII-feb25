@@ -1,3 +1,7 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .custom-bg {
   background-color: #121212 !important;
 }

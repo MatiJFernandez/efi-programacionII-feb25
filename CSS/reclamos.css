@@ -6,3 +6,97 @@ form button {
     border-radius: 25px; /* Bordes redondeados */
     transition: background 0.3s ease, transform 0.3s ease; /* Animación de transición */
 }
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+}
+
+/* Video de fondo */
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Formulario */
+.form-overlay {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.form-control {
+    background-color: #212529;
+    border: 1px solid #444;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-height: 700px) {
+    .video-container {
+        align-items: flex-start;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .form-overlay {
+        padding: 15px;
+    }
+
+    .form-overlay h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn-primary {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .form-overlay {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+    }
+}

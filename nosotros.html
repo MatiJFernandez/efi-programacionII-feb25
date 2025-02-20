@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrousel de Celulares</title>
+    <title>Nosotros</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!-- Estilos -->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="/CSS/nosotros.css">
 </head>
@@ -24,22 +27,17 @@
                 aria-controls="offcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="/index.html">
-                <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
-                    class="d-block">
+                <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo" class="d-block">
             </a>
-
             <!-- Offcanvas para el menú en móviles -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
                 <div class="offcanvas-header">
                     <a class="navbar-brand d-flex align-items-center" href="/index.html">
-                        <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo"
-                            class="d-block">
+                        <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" width="100" alt="Logo" class="d-block">
                     </a>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <!-- Buscador dentro del offcanvas (solo en móvil) -->
                 <form class="d-md-none px-3" role="search">
@@ -48,11 +46,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto d-flex align-items-center">
                         <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
-
                         <!-- Dropdown Productos -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/productos.html" id="productosDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="/productos.html" id="productosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="productosDropdown">
@@ -72,7 +69,7 @@
                                 </li>
                             </ul>
                         </li>
-
+    
                         <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="soporteDropdown" role="button"
@@ -81,8 +78,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="soporteDropdown">
                                 <li><a class="dropdown-item" href="/s-contacto.html">Contacto</a></li>
-                                <li><a class="dropdown-item" href="/s-preguntasFrec.html">Preguntas
-                                        frecuentes</a></li>
+                                <li><a class="dropdown-item" href="/s-preguntasFrec.html">Preguntas frecuentes</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/reclamos.html">Reclamos</a></li>
@@ -91,118 +87,113 @@
                 </div>
                 <!-- Iconos dentro del offcanvas (solo en móvil) -->
                 <div class="offcanvas-footer d-md-none d-flex justify-content-center p-3">
-                    <a class="nav-link mx-2" href="#" aria-label="Person">
+                    <a class="nav-link mx-2" href="/login.html" aria-label="Person">
                         <i class="bi bi-person" style="font-size: 24px; color: white;"></i>
                     </a>
-                    <a class="nav-link mx-2" href="#" aria-label="Cart">
+                    <a class="nav-link mx-2" href="#" aria-label="Cart" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
                         <i class="bi bi-cart" style="font-size: 24px; color: white;"></i>
                     </a>
+                    <span id="contadorCarritoMobile" style="font-size: 16px; color: white; margin-left: 5px;">0</span>
                 </div>
             </div>
-
+    
             <!-- Contenedor derecho (solo en pantallas grandes) -->
             <div class="d-none d-md-flex align-items-center">
                 <form class="me-3" role="search">
                     <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
                 </form>
-                <a class="nav-link mx-2" href="#" aria-label="Person">
+                <a class="nav-link mx-2" href="/login.html" aria-label="Person">
                     <i class="bi bi-person" style="font-size: 24px; color: white;"></i>
                 </a>
-                <a class="nav-link mx-2" href="#" aria-label="Cart">
+                <a class="nav-link mx-2" href="#" aria-label="Cart" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
                     <i class="bi bi-cart" style="font-size: 24px; color: white;"></i>
                 </a>
+                <span id="contadorCarritoDesktop" style="font-size: 16px; color: white; margin-left: 5px;">0</span>
             </div>
         </div>
     </nav>
 
+    <!-- Offcanvas Carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 id="carritoOffcanvasLabel">Tu Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="listaCarrito" class="list-group"></ul>
+            <p class="mt-3"><strong>Total:</strong> $<span id="totalCarrito">0.00</span></p>
+            <a href="/login.html"><button class="btn btn-success w-100">Finalizar Compra</button></a>
+        </div>
+    </div>
+    
 
-    <main class="container my-5 main-bg p-4">
+    <main class="main-bg p-4">
         <section class="text-center">
-            <div class="content-box">
-                <h1>Sobre Nosotros</h1>
+            <div class="text-box">
                 <p class="lead">La historia de cuatro estudiantes apasionados por la tecnología que decidieron revolucionar
                     el mundo de los celulares.</p>
-            </div>
-        </section>
-
-        <section class="row mt-5">
-            <div class="col-md-6">
-                <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" alt="Equipo fundador"
-                    class="img-fluid rounded shadow">
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <div class="content-box">
                     <p>
                         Todo comenzó con una idea simple: ofrecer celulares y accesorios de alta calidad a precios
-                        accesibles.
-                        Cuatro estudiantes, con experiencia en tecnología y ventas, se unieron para crear
+                        accesibles. Cuatro estudiantes, con experiencia en tecnología y ventas, se unieron para crear
                         <strong>MobXTec</strong>, una tienda que combina innovación, servicio al cliente y pasión por la
                         tecnología.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="row mt-5">
-            <div class="col-md-6 order-md-2">
-                <img src="/img/LOGO MOBXTEC ORIGINAL DEGRADE COLOR-1.png" alt="Nuestra tienda"
-                    class="img-fluid rounded shadow">
-            </div>
-            <div class="col-md-6 d-flex align-items-center order-md-1">
-                <div class="content-box">
                     <p>
-                        Desde nuestros inicios, hemos trabajado para ofrecer una experiencia de compra única.
-                        Nuestra tienda no es solo un lugar para comprar celulares, sino un espacio donde cada cliente
-                        encuentra el dispositivo perfecto según sus necesidades.
+                        Desde nuestros inicios, hemos trabajado para ofrecer una experiencia de compra única. Nuestra
+                        tienda no es solo un lugar para comprar celulares, sino un espacio donde cada cliente encuentra
+                        el dispositivo perfecto según sus necesidades.
                     </p>
                 </div>
             </div>
         </section>
-
+    
         <section class="text-center mt-5">
-            <div class="content-box">
-                <h2>Nuestra Misión</h2>
+            <div class="text-box">
+                <h2>Nuestra misión</h2>
                 <p>
                     Brindar tecnología de vanguardia con un servicio personalizado, asegurando que cada cliente obtenga
                     el mejor producto según su estilo de vida.
                 </p>
             </div>
         </section>
-
+    
         <section class="text-center mt-5">
-            <h2>Conoce a los Fundadores</h2>
+            <h2>Conoce a los fundadores</h2>
             <div class="row mt-3">
                 <div class="col-md-3">
-                    <div class="founder-box">
+                    <div class="text-box">
                         <img src="/img/messi.jpg" alt="Fundador 1" class="img-fluid rounded-circle">
                         <h5>Matías Fernández</h5>
                         <p>Especialista en hardware</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="founder-box">
+                    <div class="text-box">
                         <img src="/img/messi.jpg" alt="Fundador 2" class="img-fluid rounded-circle">
                         <h5>Lucia Monzón</h5>
                         <p>Atención al cliente</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="founder-box">
+                    <div class="text-box">
                         <img src="/img/messi.jpg" alt="Fundador 3" class="img-fluid rounded-circle">
                         <h5>Facundo Toledo</h5>
                         <p>Desarrollo de negocio</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="founder-box">
+                    <div class="text-box">
                         <img src="/img/messi.jpg" alt="Fundador 4" class="img-fluid rounded-circle">
                         <h5>Ezequiel Busto Hurtado</h5>
                         <p>Marketing digital</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
+
+    
+    
 
 
     <!-- FOOTER -->
@@ -263,10 +254,9 @@
         </div>
     </footer>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="carrito.js"></script>
     <!-- Script para manejar el submenú en el offcanvas -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
